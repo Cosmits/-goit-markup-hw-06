@@ -241,11 +241,16 @@ body {
 }
 
 .hero-btn:hover,
-.hero-btn:focus {
+.hero-btn:focus,
+.footer-subscribe-btn:hover,
+.footer-subscribe-btn:focus,
+.backdrop-modal-send:hover,
+.backdrop-modal-send:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.hero-btn:active {
+.hero-btn:active,
+.footer-subscribe-btn:active {
     background: var(--active-button-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -466,7 +471,8 @@ body {
     margin-left: 120px;
 }
 
-.footer-soc-header {
+.footer-soc-header,
+.footer-subscribe-header {
     margin-bottom: 16px;
 
     font-weight: 500;
@@ -518,6 +524,56 @@ body {
     background-color: var(--success-color);
 }
 
+.footer-subscribe {
+    margin-left: 80px;
+}
+
+.footer-subscribe-input {
+
+    width: 264px;
+    height: 40px;
+    padding-left: 16px;
+
+    font-size: 12px;
+    line-height: calc(24/1);
+
+    background: transparent;
+    color: var(--accent-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: none;
+}
+
+.footer-subscribe-group {
+    display: flex;
+    gap: 24px;
+
+}
+
+.footer-subscribe-btn {
+    width: 165px;
+    height: 40px;
+
+    display: flex;
+    gap: 16px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(24/16);
+    letter-spacing: 0.04em;
+    color: var(--active-text-color);
+    background: var(--primary-brand-color);
+    transition: box-shadow var(--timing-function);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+}
+
 /* =========== modal-windows  ===========*/
 
 .backdrop {
@@ -550,7 +606,9 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 408px;
+    padding: 24px;
+
+    max-width: 408px;
     min-height: 576px;
     transform: translate(-50%, -50%) scale(1);
 
@@ -581,6 +639,128 @@ body {
     transform: translate(-50%, -50%);
     width: 8px;
     height: 8px;
+}
+
+.backdrop-modal-header {
+    margin-top: 48px;
+    margin-bottom: 16px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(24/16);
+
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    color: var(--dark-navy-blue);
+}
+
+.backdrop-modal-form {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+}
+
+.backdrop-modal-form label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+
+.backdrop-modal-input {
+    width: 100%;
+    height: 40px;
+    padding: 0px;
+    outline: none;
+    background-color: transparent;
+    padding-left: 34px;
+
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transition: border var(--timing-function);
+}
+
+.backdrop-modal-input:focus-visible {
+    border: 1px solid var(--primary-brand-color);
+}
+
+.input-wrap {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    fill: var(--dark-navy-blue);
+    transition: fill var(--timing-function);
+}
+
+.backdrop-modal-input:focus-visible~.input-icon {
+    fill: var(--primary-brand-color);
+}
+
+.backdrop-modal-comment {
+    padding: 8px 16px;
+    height: 120px;
+    resize: none;
+}
+
+.backdrop-modal-policy label {
+    display: flex;
+
+    font-size: 12px;
+    line-height: calc(16/12);
+    letter-spacing: 0.04em;
+
+    color: #757575;
+    cursor: pointer;
+}
+
+.backdrop-modal-policy span {
+    width: 16px;
+    height: 16px;
+
+    border: 1.25px solid var(--dark-navy-blue);
+    border-radius: 2px;
+    margin-right: 8px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    fill: transparent;
+    transition: fill var(--timing-function), background-color var(--timing-function), border var(--timing-function);
+}
+
+.backdrop-modal-policy-checkbox:checked+.backdrop-modal-policy-label span {
+    background-color: var(--active-button-color);
+    border: 1.25px solid transparent;
+    fill: var(--light-mode-backgrounds);
+}
+
+
+.backdrop-modal-send {
+    position: relative;
+    width: 169px;
+    height: 56px;
+    left: 25%;
+    top: 87%;
+    margin-top: 16px;
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    color: var(--active-text-color);
+    background: var(--primary-brand-color);
+    border-radius: 4px;
+    border: var(--primary-brand-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: box-shadow var(--timing-function);
 }
 
 /* =========== Portfolio  ===========*/
