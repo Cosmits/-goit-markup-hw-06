@@ -14,7 +14,7 @@
 
     --shadow-img: linear-gradient(to top, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
 
-    --timing-function: 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* =========== global tags style =========== */
